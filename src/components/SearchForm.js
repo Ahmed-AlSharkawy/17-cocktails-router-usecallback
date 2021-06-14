@@ -6,6 +6,11 @@ const SearchForm = () => {
 
   const searchInput = React.useRef('')
 
+  React.useEffect(() => {
+    setSearchTerm('')
+    searchInput.current.value = ''
+  }, [])
+
   const setSearch = () => {
     setSearchTerm(searchInput.current.value)
   }
